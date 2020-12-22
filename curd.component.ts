@@ -22,6 +22,8 @@ export class CurdComponent implements OnInit {
     addData(){
       this.data.push(this.model);
       this.model={};
+      console.log(this.data,"data")
+      console.log(this.model,"model")
      
     }
     deleteData(i){
