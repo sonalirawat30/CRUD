@@ -38,9 +38,9 @@ export class CurdComponent implements OnInit {
     console.log(this.model1)
   }
   updateData() {  
-    //let k = this.myVal;  
+    let k = this.myVal;  
     for (let i = 0; i < this.data.length; i++){
-     if(i==this.myVal){
+     if(i==k){
          this.data[i]=this.model1;
      }
      console.log(this.data)
