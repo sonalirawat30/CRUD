@@ -21,7 +21,7 @@ export class CurdComponent implements OnInit {
     model1:any={};
     addData(){
       this.data.push(this.model);
-      this.model={};
+      this.model="";
       console.log(this.data,"data")
       console.log(this.model,"model")
      
@@ -35,6 +35,18 @@ export class CurdComponent implements OnInit {
     this.model1.name=this.data[k].name;
     this.model1.Email=this.data[k].Email;
     this.myVal=k;
+    console.log(this.model1)
   }
+  updateData() {  
+    //let k = this.myVal;  
+    for (let i = 0; i < this.data.length; i++){
+     if(i==this.myVal){
+         this.data[i]=this.model1;
+     }
+     console.log(this.data)
+    
+  
+    }
+      }  
+ }
 
-}
