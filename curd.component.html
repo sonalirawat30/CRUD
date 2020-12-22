@@ -1,0 +1,39 @@
+<div class="container">
+    <form>
+        <h3 style="text-align: center">CURD OPERATION </h3>
+         <div class="form-group">
+            <label class="control-label col-lg-10" for="name">Name</label><br>
+             <input type="text" name="name" class="form-control" id="name" placeholder="enter the name" [(ngModel)]="model.name">
+            </div><br>
+                <div class="form-group">
+                    <label class="control-label col-lg-10" for="email">Email</label><br>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="enter the email" [(ngModel)]="model.email" >
+                </div><br>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-lg-10">
+                    <button type="submit" class="btn btn-primary" (click)="addData">Save</button>
+                </div></div>
+                </form>      
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th width=400>Name</th>
+                      <th width=400>Email</th>
+                      <th width=200>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let data of data; let i=index">
+                      <td>{{data.name}}</td>
+                      <td>{{data.Email}}</td>
+                      <td>
+                        <a class="btn btn-success" (click)="editData(i)">Edit</a>
+                        <a class="btn btn-danger" (click)=" deleteData(i)">Delete</a>
+                      </td></tr>
+                  </tbody>
+                </table>
+              </div>
+            
+
+
+        
